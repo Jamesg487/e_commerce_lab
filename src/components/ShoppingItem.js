@@ -1,7 +1,41 @@
-const ShoppingItem = ({item, basketItems, setBasketItems}) => {
+import { useContext } from "react"
+import styled from "styled-components"
+import ShoppingItemsContext from "../context/ShoppingItemsContext"
+
+const Header = styled.h2`
+    font-size: 2em;
+`
+const Container = styled.div`
+    background-color: lightsalmon;
+    color: #fff;
+    border: 2px solid darkorange;
+    border-radius: 5px;
+    padding: 0.5em;
+    margin: 1em;
+    flex: 33%;
+`
+
+const Button = styled.button`
+    font-size: 1em;
+    padding: 1em;
+    margin: 0.5em;
+    border: 2px solid darkorange;
+    background: #fff;
+    color: darkorange;
+    border-radius: 5px;
+    &:hover {
+        background-color:darkorange;
+        color: #fff;
+        border: 2px solid #fff;
+    }
+`
+
+const ShoppingItem = ({item}) => {
     
+    const {addBasketItem, basketItems} = useContext(ShoppingItemsContext)
+
     const handleClick = () => {
-        setBasketItems(item)
+        addBasketItem(item)
     }
 
     const checkItemsInBasket = () => {
@@ -14,11 +48,11 @@ const ShoppingItem = ({item, basketItems, setBasketItems}) => {
     }
 
     return (
-        <>
-            <h2>{item.name}</h2>
+        <Container>
+            <Header>{item.name}</Header>
             <h3>£{item.price}</h3>
-            <button onClick={handleClick}> {checkItemsInBasket} to basket</button>
-        </>
+            <Button onClick={handleClick}> {checkItemsInBasket()} basket</Button>
+        </Container>
     )
 }
 

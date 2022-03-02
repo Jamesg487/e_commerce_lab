@@ -11,9 +11,13 @@ const ShoppingBasket = () => {
     })
 
     return (
-        <ul>
-            {basketItemNodes}
-        </ul>
+        <div>
+           <hr />
+            <h3>Shopping Basket</h3>
+             <ul>
+                {basketItemNodes}
+             </ul>
+        </div>
     )
 }
 

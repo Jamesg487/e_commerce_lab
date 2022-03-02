@@ -1,6 +1,12 @@
 import {useContext} from 'react'
+import styled from 'styled-components';
 import ShoppingItem from "./ShoppingItem";
 import ShoppingItemsContext from "../context/ShoppingItemsContext";
+
+const ItemNodes = styled.ul`
+    display: flex;
+    flex-flow: row wrap;
+`
 
 const ShoppingItemsList = () => {
 
@@ -11,9 +17,10 @@ const ShoppingItemsList = () => {
     })
 
     return (
-        <ul>
+
+        <ItemNodes>
             {shoppingItemNodes}
-        </ul>
+        </ItemNodes>
     )
 
 }
