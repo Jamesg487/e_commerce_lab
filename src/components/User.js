@@ -17,8 +17,8 @@ const User = ({user}) => {
 
 return (
     <>
-        <Name>{user.name}</Name>
-        <Email>{user.email}</Email>
+        <Name>&#128100; {user.name}</Name>
+        <Email>&#128231; {user.email}</Email>
     </>
 )
 

@@ -13,7 +13,7 @@ const ShoppingBasket = () => {
     return (
         <div>
            <hr />
-            <h3>Shopping Basket</h3>
+            <h3>Shopping Basket &#128722;</h3>
              <ul>
                 {basketItemNodes}
              </ul>
