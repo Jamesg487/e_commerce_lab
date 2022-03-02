@@ -27,6 +27,7 @@ const Button = styled.button`
         background-color:darkorange;
         color: #fff;
         border: 2px solid #fff;
+        cursor: pointer;
     }
 `
 
